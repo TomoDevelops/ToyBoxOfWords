@@ -1,4 +1,4 @@
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, SafeAreaView } from "react-native";
 import React from "react";
 
 import GAME_DATA from "../data/data";
@@ -6,7 +6,7 @@ import Button from "../components/Button";
 
 const StartScreen = () => {
     return (
-        <View style={styles.rootContainer}>
+        <SafeAreaView style={styles.rootContainer}>
             <Image
                 source={GAME_DATA.game_resources.welcome}
                 style={styles.image}
@@ -25,7 +25,7 @@ const StartScreen = () => {
                     せってい
                 </Button>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 

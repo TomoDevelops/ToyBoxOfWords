@@ -1,13 +1,17 @@
-// https://www.colorhexa.com/fdfd96
-import { StyleSheet, SafeAreaView } from "react-native";
-import { StatusBar } from "expo-status-bar";
-import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 
+import { StatusBar } from "expo-status-bar";
+import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
+
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import StartScreen from "./screens/StartScreen";
+import GameOverScreen from "./screens/GameOverScreen";
 
 SplashScreen.preventAutoHideAsync();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -25,20 +29,18 @@ export default function App() {
         return null;
     }
 
-    let screen = <StartScreen />;
-
     return (
         <>
             <StatusBar style="dark" />
-            <SafeAreaView style={styles.root} onLayout={onLayoutRootView}>
-                {screen}
-            </SafeAreaView>
+            <NavigationContainer>
+                <Stack.Navigator
+                    screenOptions={{
+                        headerShown: false,
+                    }}
+                >
+                    <Stack.Screen name="Start" component={StartScreen} />
+                </Stack.Navigator>
+            </NavigationContainer>
         </>
     );
 }
-
-const styles = StyleSheet.create({
-    root: {
-        flex: 1,
-    },
-});
