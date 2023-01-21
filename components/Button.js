@@ -14,7 +14,7 @@ const Button = ({ children, onPress, buttonStyle, textStyle }) => {
                           ]
                         : [styles.buttonInnerContainer, buttonStyle]
                 }
-                android_ripple={{ color: "#323232" }}
+                android_ripple={{ color: "#323232bf" }}
                 onPress={onPress}
             >
                 <Text style={[styles.buttonText, textStyle]}>{children}</Text>

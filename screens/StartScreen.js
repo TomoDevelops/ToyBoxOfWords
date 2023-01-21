@@ -1,10 +1,18 @@
 import { StyleSheet, View, Image, SafeAreaView } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 
 import GAME_DATA from "../data/data";
 import Button from "../components/Button";
+import { PagesContext } from "../store/context/pages-context";
 
-const StartScreen = () => {
+const StartScreen = ({ navigation }) => {
+    const pagesContext = useContext(PagesContext);
+
+    const moveToGameScreen = () => {
+        pagesContext.shufflePage();
+        navigation.navigate("GameScreen");
+    };
+
     return (
         <SafeAreaView style={styles.rootContainer}>
             <Image
@@ -15,6 +23,7 @@ const StartScreen = () => {
                 <Button
                     buttonStyle={styles.button}
                     textStyle={styles.buttonText}
+                    onPress={moveToGameScreen}
                 >
                     あそぶ
                 </Button>

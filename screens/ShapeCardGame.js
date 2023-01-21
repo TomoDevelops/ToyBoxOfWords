@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const GameOverScreen = () => {
+const ShapeCardGame = () => {
     return (
         <View style={styles.rootContainer}>
-            <Text>GameOverScreen</Text>
+            <Text>ShapeCardGame</Text>
         </View>
     );
 };
 
-export default GameOverScreen;
+export default ShapeCardGame;
 
 const styles = StyleSheet.create({
     rootContainer: {
