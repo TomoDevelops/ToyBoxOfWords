@@ -10,7 +10,7 @@ const StartScreen = ({ navigation }) => {
 
     const moveToGameScreen = () => {
         pagesContext.shufflePage();
-        navigation.navigate("GameScreen");
+        navigation.navigate(pagesContext.pages);
     };
 
     return (
@@ -23,6 +23,7 @@ const StartScreen = ({ navigation }) => {
                 <Button
                     buttonStyle={styles.button}
                     textStyle={styles.buttonText}
+                    buttonBgColor={{ backgroundColor: "#fff" }}
                     onPress={moveToGameScreen}
                 >
                     あそぶ
@@ -30,6 +31,7 @@ const StartScreen = ({ navigation }) => {
                 <Button
                     buttonStyle={styles.button}
                     textStyle={styles.buttonText}
+                    buttonBgColor={{ backgroundColor: "#fff" }}
                 >
                     せってい
                 </Button>

@@ -1,6 +1,9 @@
 import { createContext, useState } from "react";
 
-import GAME_DATA from "../../data/data";
+const GAME_SCREEN_NAME = ["MemoryCardGame", "NumberCardGame", "ShapeCardGame"];
+
+const firstGamePage =
+    GAME_SCREEN_NAME[Math.floor(Math.random() * GAME_SCREEN_NAME.length)];
 
 export const PagesContext = createContext({
     pages: "",
@@ -8,13 +11,7 @@ export const PagesContext = createContext({
 });
 
 const PagesContextProvider = ({ children }) => {
-    const GAME_SCREEN_NAME = [
-        "memoryCardGame",
-        "numberCardGame",
-        "shapeCardGame",
-    ];
-
-    const [currentPage, setCurrentPage] = useState("memoryCardGame");
+    const [currentPage, setCurrentPage] = useState(firstGamePage);
 
     const shufflePage = () => {
         const randomDisplay = Math.floor(
@@ -24,13 +21,12 @@ const PagesContextProvider = ({ children }) => {
             const currentPageExcluded = GAME_SCREEN_NAME.filter(
                 (screen) => screen !== prevPage
             );
-            console.log(currentPageExcluded[randomDisplay]);
             return currentPageExcluded[randomDisplay];
         });
     };
 
     const value = {
-        pages: GAME_DATA.game_pages[currentPage],
+        pages: currentPage,
         shufflePage: shufflePage,
     };
 

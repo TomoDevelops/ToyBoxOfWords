@@ -1,9 +1,16 @@
 import { Pressable, StyleSheet, Text, View, Platform } from "react-native";
 import React from "react";
 
-const Button = ({ children, onPress, buttonStyle, textStyle }) => {
+const Button = ({
+    children,
+    onPress,
+    buttonStyle,
+    textStyle,
+    buttonBgColor,
+    buttonSpace,
+}) => {
     return (
-        <View style={styles.buttonOuterContainer}>
+        <View style={[styles.buttonOuterContainer, buttonBgColor, buttonSpace]}>
             <Pressable
                 style={({ pressed }) =>
                     pressed
@@ -27,7 +34,6 @@ export default Button;
 
 const styles = StyleSheet.create({
     buttonOuterContainer: {
-        backgroundColor: "#fff",
         borderRadius: 10,
         elevation: 8,
         overflow: Platform.OS === "android" ? "hidden" : "visible",
@@ -38,6 +44,7 @@ const styles = StyleSheet.create({
     },
     buttonInnerContainer: {
         justifyContent: "center",
+        padding: 6,
     },
     buttonText: {
         textAlign: "center",

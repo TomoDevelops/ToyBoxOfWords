@@ -12,11 +12,6 @@ const GAME_DATA = {
         playButton: require("../assets/images/system/play.png"),
         goodJobGif: require("../assets/images/system/good-job.gif"),
     },
-    game_pages: {
-        memoryCardGame: MemoryCardGame,
-        numberCardGame: NumberCardGame,
-        shapeCardGame: ShapeCardGame,
-    },
     // "memory-game": [
     //     { src: require("../assets/img/dog.png"), matched: false },
     //     { src: require("../assets/img/cat.png"), matched: false },

@@ -1,27 +1,38 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+    StyleSheet,
+    Text,
+    SafeAreaView,
+    StatusBar,
+    Platform,
+} from "react-native";
+
 import React, { useContext } from "react";
+
 import Button from "../components/Button";
 import { PagesContext } from "../store/context/pages-context";
+import HeaderButtons from "../components/HeaderButtons";
 
 const MemoryCardGame = ({ navigation }) => {
     const pagesContext = useContext(PagesContext);
 
     const shuffleGame = () => {
         pagesContext.shufflePage();
-        navigation.navigate("GameScreen");
+        navigation.navigate(pagesContext.pages);
     };
 
     return (
-        <View style={styles.rootContainer}>
+        <SafeAreaView style={styles.rootContainer}>
+            <HeaderButtons />
             <Text>MemoryCardGame</Text>
             <Button
-                buttonStyle={styles.button}
-                textStyle={styles.buttonText}
+                buttonStyle={styles.changeButton}
+                textStyle={styles.changeButtonText}
+                buttonBgColor={{ backgroundColor: "transparent" }}
                 onPress={shuffleGame}
             >
                 Test
             </Button>
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -29,15 +40,21 @@ export default MemoryCardGame;
 
 const styles = StyleSheet.create({
     rootContainer: {
-        alignItems: "center",
+        backgroundColor: "#fcfc4b",
         flex: 1,
-        justifyContent: "center",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     },
-    button: {
+    homeButton: {
+        height: 75,
+        width: 75,
+    },
+    changeButton: {
         height: 75,
         width: 145,
     },
-    buttonText: {
+    changeButtonText: {
         fontFamily: "kodomo",
         fontSize: 28,
     },
