@@ -6,32 +6,17 @@ import {
     Platform,
 } from "react-native";
 
-import React, { useContext } from "react";
+import React from "react";
 
-import Button from "../components/Button";
-import { PagesContext } from "../store/context/pages-context";
 import HeaderButtons from "../components/HeaderButtons";
 
-const MemoryCardGame = ({ navigation }) => {
-    const pagesContext = useContext(PagesContext);
+import colors from "../constants/Colors";
 
-    const shuffleGame = () => {
-        pagesContext.shufflePage();
-        navigation.navigate(pagesContext.pages);
-    };
-
+const MemoryCardGame = () => {
     return (
         <SafeAreaView style={styles.rootContainer}>
             <HeaderButtons />
             <Text>MemoryCardGame</Text>
-            <Button
-                buttonStyle={styles.changeButton}
-                textStyle={styles.changeButtonText}
-                buttonBgColor={{ backgroundColor: "transparent" }}
-                onPress={shuffleGame}
-            >
-                Test
-            </Button>
         </SafeAreaView>
     );
 };
@@ -40,7 +25,10 @@ export default MemoryCardGame;
 
 const styles = StyleSheet.create({
     rootContainer: {
-        backgroundColor: "#fcfc4b",
+        backgroundColor:
+            colors.gameBgColor[
+                Math.floor(Math.random() * colors.gameBgColor.length)
+            ],
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",

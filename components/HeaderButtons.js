@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -8,6 +8,8 @@ import Entypo from "@expo/vector-icons/Entypo";
 import { PagesContext } from "../store/context/pages-context";
 
 import Button from "./Button";
+
+import colors from "../constants/Colors";
 
 const HeaderButtons = () => {
     const navigation = useNavigation();
@@ -19,8 +21,11 @@ const HeaderButtons = () => {
 
     const shuffleGame = () => {
         pagesContext.shufflePage();
-        navigation.navigate(pagesContext.pages);
     };
+
+    useEffect(() => {
+        navigation.navigate(pagesContext.pages);
+    }, [pagesContext.pages]);
 
     return (
         <View style={styles.buttonsContainer}>
@@ -28,21 +33,29 @@ const HeaderButtons = () => {
                 buttonBgColor={{ backgroundColor: "#fff" }}
                 onPress={moveHome}
             >
-                <Ionicons name="home" size={32} color="black" />
+                <Ionicons name="home" size={30} color="black" />
             </Button>
             <View style={styles.innerButtonsContainer}>
                 <Button
                     buttonSpace={styles.buttonSpace}
-                    buttonBgColor={{ backgroundColor: "#fff" }}
+                    buttonBgColor={{
+                        backgroundColor: colors.vaibrantBlue,
+                        borderWidth: 3,
+                        borderColor: "#fff",
+                    }}
                     onPress={shuffleGame}
                 >
-                    <Entypo name="cycle" size={32} color="black" />
+                    <Entypo name="cycle" size={50} color="#fff" />
                 </Button>
                 <Button
                     buttonSpace={styles.buttonSpace}
-                    buttonBgColor={{ backgroundColor: "#fff" }}
+                    buttonBgColor={{
+                        backgroundColor: colors.vaibrantRed,
+                        borderWidth: 3,
+                        borderColor: "#fff",
+                    }}
                 >
-                    <Entypo name="grid" size={32} color="black" />
+                    <Entypo name="grid" size={50} color="#fff" />
                 </Button>
             </View>
             <View style={styles.spacer}></View>
@@ -54,11 +67,11 @@ export default HeaderButtons;
 
 const styles = StyleSheet.create({
     buttonsContainer: {
-        alignItems: "center",
+        alignItems: "flex-start",
         flexDirection: "row",
         justifyContent: "space-between",
-        marginTop: 12,
-        width: "90%",
+        marginTop: 6,
+        width: "95%",
     },
     innerButtonsContainer: {
         flexDirection: "row",
@@ -69,7 +82,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 6,
     },
     spacer: {
-        height: 32,
-        width: 32,
+        height: 30,
+        width: 30,
     },
 });

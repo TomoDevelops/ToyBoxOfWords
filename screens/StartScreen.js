@@ -1,5 +1,6 @@
 import { StyleSheet, View, Image, SafeAreaView } from "react-native";
-import React, { useContext } from "react";
+import { useIsFocused } from "@react-navigation/native";
+import React, { useContext, useEffect } from "react";
 
 import GAME_DATA from "../data/data";
 import Button from "../components/Button";
@@ -7,6 +8,13 @@ import { PagesContext } from "../store/context/pages-context";
 
 const StartScreen = ({ navigation }) => {
     const pagesContext = useContext(PagesContext);
+    const isFocused = useIsFocused();
+
+    useEffect(() => {
+        if (isFocused) {
+            pagesContext.shuffleGamePages();
+        }
+    }, [isFocused]);
 
     const moveToGameScreen = () => {
         pagesContext.shufflePage();
@@ -56,14 +64,14 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         marginTop: 24,
-        width: "80%",
+        width: "85%",
     },
     button: {
-        height: 75,
-        width: 145,
+        height: 85,
+        width: 150,
     },
     buttonText: {
         fontFamily: "kodomo",
-        fontSize: 28,
+        fontSize: 32,
     },
 });

@@ -1,27 +1,27 @@
 import {
     StyleSheet,
     Text,
-    View,
     SafeAreaView,
-    Platform,
     StatusBar,
+    Platform,
 } from "react-native";
+
 import React from "react";
 
 import HeaderButtons from "../components/HeaderButtons";
 
 import colors from "../constants/Colors";
 
-const ShapeCardGame = () => {
+const AlphabetCardGame = () => {
     return (
         <SafeAreaView style={styles.rootContainer}>
             <HeaderButtons />
-            <Text>ShapeCardGame</Text>
+            <Text>AlphabetCardGame</Text>
         </SafeAreaView>
     );
 };
 
-export default ShapeCardGame;
+export default AlphabetCardGame;
 
 const styles = StyleSheet.create({
     rootContainer: {
@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    },
+    homeButton: {
+        height: 75,
+        width: 75,
     },
     changeButton: {
         height: 75,

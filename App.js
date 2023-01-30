@@ -7,13 +7,10 @@ import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import StartScreen from "./screens/StartScreen";
-import GameOverScreen from "./screens/GameOverScreen";
 import PagesContextProvider from "./store/context/pages-context";
 
-import MemoryCardGame from "./screens/MemoryCardGame";
-import NumberCardGame from "./screens/NumberCardGame";
-import ShapeCardGame from "./screens/ShapeCardGame";
+import routes from "./screens/Routes";
+import colors from "./constants/Colors";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,11 +33,6 @@ export default function App() {
         SplashScreen.hideAsync();
     }
 
-    const pageAnimation = {
-        animation: "fade",
-        presentation: "card",
-    };
-
     return (
         <>
             <StatusBar style="dark" />
@@ -49,34 +41,19 @@ export default function App() {
                     <Stack.Navigator
                         screenOptions={{
                             headerShown: false,
-                            contentStyle: { backgroundColor: "##ff3c3c" },
+                            contentStyle: {
+                                backgroundColor: colors.mainBgColor,
+                            },
                         }}
                     >
-                        <Stack.Screen
-                            name="Start"
-                            component={StartScreen}
-                            options={pageAnimation}
-                        />
-                        <Stack.Screen
-                            name="GameOver"
-                            component={GameOverScreen}
-                            options={pageAnimation}
-                        />
-                        <Stack.Screen
-                            name="MemoryCardGame"
-                            component={MemoryCardGame}
-                            options={pageAnimation}
-                        />
-                        <Stack.Screen
-                            name="NumberCardGame"
-                            component={NumberCardGame}
-                            options={pageAnimation}
-                        />
-                        <Stack.Screen
-                            name="ShapeCardGame"
-                            component={ShapeCardGame}
-                            options={pageAnimation}
-                        />
+                        {routes.map((route) => (
+                            <Stack.Screen
+                                key={route.name}
+                                name={route.name}
+                                component={route.component}
+                                options={route.options}
+                            />
+                        ))}
                     </Stack.Navigator>
                 </NavigationContainer>
             </PagesContextProvider>

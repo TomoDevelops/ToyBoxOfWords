@@ -1,7 +1,3 @@
-import MemoryCardGame from "../screens/MemoryCardGame";
-import NumberCardGame from "../screens/NumberCardGame";
-import ShapeCardGame from "../screens/ShapeCardGame";
-
 const GAME_DATA = {
     game_resources: {
         correct: require("../assets/audio/system/correct.mp3"),

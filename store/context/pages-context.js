@@ -1,32 +1,45 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-const GAME_SCREEN_NAME = ["MemoryCardGame", "NumberCardGame", "ShapeCardGame"];
-
-const firstGamePage =
-    GAME_SCREEN_NAME[Math.floor(Math.random() * GAME_SCREEN_NAME.length)];
+const GAME_SCREEN_NAME = [
+    "MemoryCardGame",
+    "NumberCardGame",
+    "ShapeCardGame",
+    "AlphabetCardGame",
+];
 
 export const PagesContext = createContext({
     pages: "",
+    shuffleGamePages: () => {},
     shufflePage: () => {},
 });
 
 const PagesContextProvider = ({ children }) => {
-    const [currentPage, setCurrentPage] = useState(firstGamePage);
+    const [shuffledGamePages, setShuffledGamePages] = useState([]);
+    const [currentPage, setCurrentPage] = useState("");
+    const [currentPageCount, setCurrentPageCount] = useState(0);
+
+    const shuffleGamePages = () => {
+        setShuffledGamePages(
+            GAME_SCREEN_NAME.sort((a, b) => 0.5 - Math.random())
+        );
+    };
+
+    useEffect(() => {
+        setCurrentPage(shuffledGamePages[0]);
+    }, [shuffledGamePages]);
 
     const shufflePage = () => {
-        const randomDisplay = Math.floor(
-            Math.random() * (GAME_SCREEN_NAME.length - 1)
-        );
-        setCurrentPage((prevPage) => {
-            const currentPageExcluded = GAME_SCREEN_NAME.filter(
-                (screen) => screen !== prevPage
-            );
-            return currentPageExcluded[randomDisplay];
-        });
+        setCurrentPage(shuffledGamePages[currentPageCount]);
+        if (currentPageCount < GAME_SCREEN_NAME.length - 1) {
+            setCurrentPageCount((cnt) => cnt + 1);
+        } else {
+            setCurrentPageCount(0);
+        }
     };
 
     const value = {
         pages: currentPage,
+        shuffleGamePages: shuffleGamePages,
         shufflePage: shufflePage,
     };
 

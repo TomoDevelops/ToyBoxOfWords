@@ -34,7 +34,7 @@ export default Button;
 
 const styles = StyleSheet.create({
     buttonOuterContainer: {
-        borderRadius: 10,
+        borderRadius: 8,
         elevation: 8,
         overflow: Platform.OS === "android" ? "hidden" : "visible",
         shadowColor: "#000",
