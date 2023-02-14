@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
         padding: 6,
     },
     buttonText: {
+        fontFamily: "kodomo",
         textAlign: "center",
     },
     pressed: {

@@ -1,14 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import React from "react";
 
-const Title = () => {
+const Title = ({ children, fontSize }) => {
     return (
         <View>
-            <Text>Title</Text>
+            <Text style={[styles.title, { fontSize: fontSize }]}>
+                {children}
+            </Text>
         </View>
     );
 };
 
-export default Title;
+const styles = StyleSheet.create({
+    title: {
+        fontFamily: "kodomo",
+        marginBottom: 25,
+    },
+});
 
-const styles = StyleSheet.create({});
+export default Title;

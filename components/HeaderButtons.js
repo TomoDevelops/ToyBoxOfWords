@@ -3,12 +3,12 @@ import React, { useContext, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
+import LottieView from "lottie-react-native";
 import Entypo from "@expo/vector-icons/Entypo";
 
 import { PagesContext } from "../store/context/pages-context";
 
 import Button from "./Button";
-
 import colors from "../constants/Colors";
 
 const HeaderButtons = () => {
@@ -33,7 +33,16 @@ const HeaderButtons = () => {
                 buttonBgColor={{ backgroundColor: "#fff" }}
                 onPress={moveHome}
             >
-                <Ionicons name="home" size={30} color="black" />
+                <LottieView
+                    autoPlay
+                    style={{
+                        width: 40,
+                        height: 40,
+                        backgroundColor: "transparent",
+                    }}
+                    source={require("../assets/images/system/home.json")}
+                />
+                {/* <Ionicons name="home" size={30} color="black" /> */}
             </Button>
             <View style={styles.innerButtonsContainer}>
                 <Button
@@ -68,9 +77,10 @@ export default HeaderButtons;
 const styles = StyleSheet.create({
     buttonsContainer: {
         alignItems: "flex-start",
+        flex: 1,
         flexDirection: "row",
         justifyContent: "space-between",
-        marginTop: 6,
+        marginTop: 8,
         width: "95%",
     },
     innerButtonsContainer: {

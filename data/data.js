@@ -4,18 +4,35 @@ const GAME_DATA = {
         wrong: require("../assets/audio/system/wrong.mp3"),
         goodJob: require("../assets/audio/system/good-job.mp3"),
         welcome: require("../assets/images/system/welcome.png"),
-        playButton: require("../assets/images/system/home.png"),
         playButton: require("../assets/images/system/play.png"),
-        goodJobGif: require("../assets/images/system/good-job.gif"),
+        confetti: require("../assets/images/system/confetti.json"),
     },
-    // "memory-game": [
-    //     { src: require("../assets/img/dog.png"), matched: false },
-    //     { src: require("../assets/img/cat.png"), matched: false },
-    //     { src: require("../assets/img/bird.png"), matched: false },
-    //     { src: require("../assets/img/dinosaur.png"), matched: false },
-    //     { src: require("../assets/img/dolphin.png"), matched: false },
-    //     { src: require("../assets/img/penguin.png"), matched: false },
-    // ],
+    "memory-game": [
+        {
+            src: require("../assets/images/card_game/dog.png"),
+            matched: false,
+        },
+        {
+            src: require("../assets/images/card_game/cat.png"),
+            matched: false,
+        },
+        {
+            src: require("../assets/images/card_game/bird.png"),
+            matched: false,
+        },
+        {
+            src: require("../assets/images/card_game/dinosaur.png"),
+            matched: false,
+        },
+        {
+            src: require("../assets/images/card_game/dolphin.png"),
+            matched: false,
+        },
+        {
+            src: require("../assets/images/card_game/penguin.png"),
+            matched: false,
+        },
+    ],
     // "number-game": [
     //     {
     //         type: "one",
