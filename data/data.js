@@ -40,7 +40,184 @@ const GAME_DATA = {
             matched: false,
         },
     ],
-    alphabetGame: [{ alphabet: "A" }],
+    alphabetGame: [
+        {
+            alphabet: "A",
+            image: [
+                require("../assets/images/alphabetGame/airplane.png"),
+                require("../assets/images/alphabetGame/apple.png"),
+            ],
+        },
+        {
+            alphabet: "B",
+            image: [
+                require("../assets/images/alphabetGame/bicycle.png"),
+                require("../assets/images/alphabetGame/butterfly.png"),
+            ],
+        },
+        {
+            alphabet: "C",
+            image: [
+                require("../assets/images/alphabetGame/car.png"),
+                require("../assets/images/alphabetGame/cow.png"),
+            ],
+        },
+        {
+            alphabet: "D",
+            image: [
+                require("../assets/images/alphabetGame/dog.png"),
+                require("../assets/images/alphabetGame/duck.png"),
+            ],
+        },
+        {
+            alphabet: "E",
+            image: [
+                require("../assets/images/alphabetGame/egg.png"),
+                require("../assets/images/alphabetGame/elephant.png"),
+            ],
+        },
+        {
+            alphabet: "F",
+            image: [
+                require("../assets/images/alphabetGame/fish.png"),
+                require("../assets/images/alphabetGame/flower.png"),
+            ],
+        },
+        {
+            alphabet: "G",
+            image: [
+                require("../assets/images/alphabetGame/giraffe.png"),
+                require("../assets/images/alphabetGame/glove.png"),
+            ],
+        },
+        {
+            alphabet: "H",
+            image: [
+                require("../assets/images/alphabetGame/horse.png"),
+                require("../assets/images/alphabetGame/house.png"),
+            ],
+        },
+        {
+            alphabet: "I",
+            image: [
+                require("../assets/images/alphabetGame/ice.png"),
+                require("../assets/images/alphabetGame/icecream.png"),
+            ],
+        },
+        {
+            alphabet: "J",
+            image: [
+                require("../assets/images/alphabetGame/jelly.png"),
+                require("../assets/images/alphabetGame/jumprope.png"),
+            ],
+        },
+        {
+            alphabet: "K",
+            image: [
+                require("../assets/images/alphabetGame/koala.png"),
+                require("../assets/images/alphabetGame/ketchup.png"),
+            ],
+        },
+        {
+            alphabet: "L",
+            image: [
+                require("../assets/images/alphabetGame/lemon.png"),
+                require("../assets/images/alphabetGame/lion.png"),
+            ],
+        },
+        {
+            alphabet: "M",
+            image: [
+                require("../assets/images/alphabetGame/monkey.png"),
+                require("../assets/images/alphabetGame/mouth.png"),
+            ],
+        },
+        {
+            alphabet: "N",
+            image: [
+                require("../assets/images/alphabetGame/nose.png"),
+                require("../assets/images/alphabetGame/nut.png"),
+            ],
+        },
+        {
+            alphabet: "O",
+            image: [
+                require("../assets/images/alphabetGame/octopus.png"),
+                require("../assets/images/alphabetGame/orange.png"),
+            ],
+        },
+        {
+            alphabet: "P",
+            image: [
+                require("../assets/images/alphabetGame/pig.png"),
+                require("../assets/images/alphabetGame/pineapple.png"),
+            ],
+        },
+        {
+            alphabet: "Q",
+            image: [require("../assets/images/alphabetGame/queen.png")],
+        },
+        {
+            alphabet: "R",
+            image: [
+                require("../assets/images/alphabetGame/rainbow.png"),
+                require("../assets/images/alphabetGame/robot.png"),
+            ],
+        },
+        {
+            alphabet: "S",
+            image: [
+                require("../assets/images/alphabetGame/snake.png"),
+                require("../assets/images/alphabetGame/sun.png"),
+            ],
+        },
+        {
+            alphabet: "T",
+            image: [
+                require("../assets/images/alphabetGame/tiger.png"),
+                require("../assets/images/alphabetGame/train.png"),
+            ],
+        },
+        {
+            alphabet: "U",
+            image: [
+                require("../assets/images/alphabetGame/umbrella.png"),
+                require("../assets/images/alphabetGame/unicorn.png"),
+            ],
+        },
+        {
+            alphabet: "V",
+            image: [
+                require("../assets/images/alphabetGame/vegetable.png"),
+                require("../assets/images/alphabetGame/violin.png"),
+            ],
+        },
+        {
+            alphabet: "W",
+            image: [
+                require("../assets/images/alphabetGame/water.png"),
+                require("../assets/images/alphabetGame/whale.png"),
+            ],
+        },
+        {
+            alphabet: "X",
+            image: [require("../assets/images/alphabetGame/x-ray.png")],
+        },
+        {
+            alphabet: "Y",
+            image: [
+                require("../assets/images/alphabetGame/yacht.png"),
+                require("../assets/images/alphabetGame/yarn.png"),
+            ],
+        },
+        {
+            alphabet: "Z",
+            image: [
+                require("../assets/images/alphabetGame/zebra.png"),
+                require("../assets/images/alphabetGame/zoo.png"),
+            ],
+        },
+    ],
     // "number-game": [
     //     {
     //         type: "one",
