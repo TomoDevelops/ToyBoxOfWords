@@ -5,10 +5,17 @@ import React from "react";
 
 import colors from "../../constants/Colors";
 
-const SingleCard = ({ card, handleUserChoice, flipped, disabled }) => {
+const SingleCard = ({
+    card,
+    handleUserChoice,
+    playCardSound,
+    flipped,
+    disabled,
+}) => {
     const handlePress = () => {
         if (!disabled && !card.matched && !flipped) {
             handleUserChoice(card);
+            playCardSound(card);
         }
     };
     return (
@@ -42,7 +49,7 @@ const SingleCard = ({ card, handleUserChoice, flipped, disabled }) => {
                 useNativeDriver
             >
                 <Image
-                    source={require("../../assets/images/card_game/card-back.png")}
+                    source={require("../../assets/images/memoryGame/card-back.png")}
                     style={styles.cardImage}
                 />
             </Animatable.View>

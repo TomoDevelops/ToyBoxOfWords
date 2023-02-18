@@ -9,7 +9,7 @@ import colors from "../constants/Colors";
 import GAME_DATA from "../data/data";
 
 import GameBoard from "../components/GameBoard";
-import SingleCard from "../components/memory_game/SingleCard";
+import SingleCard from "../components/memoryGame/SingleCard";
 import Title from "../components/Title";
 import Button from "../components/Button";
 
@@ -26,17 +26,26 @@ const MemoryCardGame = () => {
 
     const playSound = async () => {
         const { sound } = await Audio.Sound.createAsync(
-            GAME_DATA.game_resources.goodJob
+            GAME_DATA.gameResources.goodJob
         );
         setSound(sound);
 
         await sound.playAsync();
     };
 
+    const playCardSound = async (card) => {
+        const { sound } = await Audio.Sound.createAsync(card.audio);
+        setSound(sound);
+
+        setTimeout(() => {
+            sound.playAsync();
+        }, 500);
+    };
+
     const shuffleCards = () => {
         const shuffledCards = [
-            ...GAME_DATA["memory-game"],
-            ...GAME_DATA["memory-game"],
+            ...GAME_DATA["memoryGame"],
+            ...GAME_DATA["memoryGame"],
         ]
             .sort(() => Math.random() - 0.5)
             .map((card) => ({ ...card, id: Math.random() }));
@@ -103,6 +112,7 @@ const MemoryCardGame = () => {
                         key={card.id}
                         card={card}
                         handleUserChoice={handleUserChoice}
+                        playCardSound={playCardSound}
                         flipped={
                             card === choiceOne ||
                             card === choiceTwo ||

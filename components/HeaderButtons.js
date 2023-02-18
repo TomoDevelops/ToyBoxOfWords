@@ -2,7 +2,6 @@ import { StyleSheet, View } from "react-native";
 import React, { useContext, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
-import Ionicons from "@expo/vector-icons/Ionicons";
 import LottieView from "lottie-react-native";
 import Entypo from "@expo/vector-icons/Entypo";
 
@@ -10,6 +9,7 @@ import { PagesContext } from "../store/context/pages-context";
 
 import Button from "./Button";
 import colors from "../constants/Colors";
+import GAME_DATA from "../data/data";
 
 const HeaderButtons = () => {
     const navigation = useNavigation();
@@ -40,7 +40,7 @@ const HeaderButtons = () => {
                         height: 40,
                         backgroundColor: "transparent",
                     }}
-                    source={require("../assets/images/system/home.json")}
+                    source={GAME_DATA.gameResources.homeButton}
                 />
                 {/* <Ionicons name="home" size={30} color="black" /> */}
             </Button>

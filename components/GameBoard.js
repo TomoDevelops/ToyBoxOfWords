@@ -12,7 +12,7 @@ const GameBoard = ({ children, completed }) => {
                 <>
                     <LottieView
                         autoPlay
-                        source={GAME_DATA.game_resources.confetti}
+                        source={GAME_DATA.gameResources.confetti}
                         style={{
                             transform: [{ rotate: "15deg" }],
                             position: "absolute",
@@ -22,7 +22,7 @@ const GameBoard = ({ children, completed }) => {
                     />
                     <LottieView
                         autoPlay
-                        source={GAME_DATA.game_resources.confetti}
+                        source={GAME_DATA.gameResources.confetti}
                         style={{
                             transform: [{ rotate: "75deg" }],
                             position: "absolute",
@@ -32,7 +32,7 @@ const GameBoard = ({ children, completed }) => {
                     />
                     <LottieView
                         autoPlay
-                        source={GAME_DATA.game_resources.confetti}
+                        source={GAME_DATA.gameResources.confetti}
                         style={{
                             transform: [{ rotate: "105deg" }],
                             position: "absolute",
@@ -42,7 +42,7 @@ const GameBoard = ({ children, completed }) => {
                     />
                     <LottieView
                         autoPlay
-                        source={GAME_DATA.game_resources.confetti}
+                        source={GAME_DATA.gameResources.confetti}
                         style={{
                             transform: [{ rotate: "165deg" }],
                             position: "absolute",

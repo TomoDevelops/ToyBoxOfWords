@@ -18,6 +18,7 @@ export default function App() {
     const [fontsLoaded] = useFonts({
         kodomo: require("./assets/fonts/KodomoRounded.otf"),
         kodomoLight: require("./assets/fonts/KodomoRounded-Light.otf"),
+        archivo: require("./assets/fonts/Archivo-Regular.ttf"),
     });
 
     useEffect(() => {

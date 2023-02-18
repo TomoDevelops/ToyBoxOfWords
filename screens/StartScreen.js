@@ -24,7 +24,7 @@ const StartScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.rootContainer}>
             <Image
-                source={GAME_DATA.game_resources.welcome}
+                source={GAME_DATA.gameResources.welcome}
                 style={styles.image}
             />
             <View style={styles.buttonContainer}>

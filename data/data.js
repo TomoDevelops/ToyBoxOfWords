@@ -1,38 +1,46 @@
 const GAME_DATA = {
-    game_resources: {
+    gameResources: {
+        welcome: require("../assets/images/system/welcome.png"),
         correct: require("../assets/audio/system/correct.mp3"),
         wrong: require("../assets/audio/system/wrong.mp3"),
         goodJob: require("../assets/audio/system/good-job.mp3"),
-        welcome: require("../assets/images/system/welcome.png"),
         playButton: require("../assets/images/system/play.png"),
+        homeButton: require("../assets/images/system/home.json"),
         confetti: require("../assets/images/system/confetti.json"),
     },
-    "memory-game": [
+    memoryGame: [
         {
-            src: require("../assets/images/card_game/dog.png"),
+            src: require("../assets/images/memoryGame/dog.png"),
+            audio: require("../assets/audio/memoryGame/dog.mp3"),
             matched: false,
         },
         {
-            src: require("../assets/images/card_game/cat.png"),
+            src: require("../assets/images/memoryGame/cat.png"),
+            audio: require("../assets/audio/memoryGame/cat.mp3"),
             matched: false,
         },
         {
-            src: require("../assets/images/card_game/bird.png"),
+            src: require("../assets/images/memoryGame/bird.png"),
+            audio: require("../assets/audio/memoryGame/bird.mp3"),
             matched: false,
         },
         {
-            src: require("../assets/images/card_game/dinosaur.png"),
+            src: require("../assets/images/memoryGame/dinosaur.png"),
+            audio: require("../assets/audio/memoryGame/dinosaur.mp3"),
             matched: false,
         },
         {
-            src: require("../assets/images/card_game/dolphin.png"),
+            src: require("../assets/images/memoryGame/dolphin.png"),
+            audio: require("../assets/audio/memoryGame/dolphin.mp3"),
             matched: false,
         },
         {
-            src: require("../assets/images/card_game/penguin.png"),
+            src: require("../assets/images/memoryGame/penguin.png"),
+            audio: require("../assets/audio/memoryGame/penguin.mp3"),
             matched: false,
         },
     ],
+    alphabetGame: [{ alphabet: "A" }],
     // "number-game": [
     //     {
     //         type: "one",
