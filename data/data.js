@@ -4,9 +4,10 @@ const GAME_DATA = {
         correct: require("../assets/audio/system/correct.mp3"),
         wrong: require("../assets/audio/system/wrong.mp3"),
         goodJob: require("../assets/audio/system/good-job.mp3"),
+        congrats: require("../assets/images/system/goodjob.gif"),
         playButton: require("../assets/images/system/play.png"),
-        homeButton: require("../assets/images/system/home.json"),
-        confetti: require("../assets/images/system/confetti.json"),
+        robot: require("../assets/images/system/robot.json"),
+        star: require("../assets/images/system/star.json"),
     },
     memoryGame: [
         {

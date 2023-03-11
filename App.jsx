@@ -24,19 +24,18 @@ export default function App() {
     useEffect(() => {
         async function prepare() {
             await SplashScreen.preventAutoHideAsync();
+            SplashScreen.hideAsync();
         }
         prepare();
     }, []);
 
     if (!fontsLoaded) {
         return undefined;
-    } else {
-        SplashScreen.hideAsync();
     }
 
     return (
         <>
-            <StatusBar style="dark" />
+            <StatusBar barStyle="light-content" />
             <PagesContextProvider>
                 <NavigationContainer>
                     <Stack.Navigator

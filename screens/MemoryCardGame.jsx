@@ -12,6 +12,7 @@ import GameBoard from "../components/GameBoard";
 import SingleCard from "../components/memoryGame/SingleCard";
 import Title from "../components/Title";
 import Button from "../components/Button";
+import Congratulations from "../components/Congratulations";
 
 const MemoryCardGame = () => {
     const [cards, setCards] = useState([]);
@@ -103,7 +104,10 @@ const MemoryCardGame = () => {
     }, []);
 
     return (
-        <SafeAreaView style={styles.rootContainer}>
+        <SafeAreaView
+            className={`flex-1 items-center justify-between pb-8`}
+            style={styles.rootContainer}
+        >
             <HeaderButtons />
             <Title fontSize={30}>{"かーど を そろえよう"}</Title>
             <GameBoard completed={completed}>
@@ -122,17 +126,24 @@ const MemoryCardGame = () => {
                     />
                 ))}
             </GameBoard>
-            {completed && (
+            <Congratulations
+                completed={completed}
+                restartButton={shuffleCards}
+            />
+            {/* {completed && (
                 <Button
                     style={styles.playAgainButton}
-                    buttonBgColor={{ backgroundColor: "#00a0fc" }}
-                    buttonStyle={styles.buttonStyle}
-                    textStyle={styles.buttonText}
+                    buttonBgColor={{
+                        backgroundColor: "#ff959f",
+                        borderRadius: 24,
+                    }}
+                    buttonStyle="w-64 h-16"
+                    textStyle="text-white text-2xl"
                     onPress={shuffleCards}
                 >
                     もう いっかい
                 </Button>
-            )}
+            )} */}
         </SafeAreaView>
     );
 };
@@ -145,36 +156,9 @@ const styles = StyleSheet.create({
             colors.gameBgColor[
                 Math.floor(Math.random() * colors.gameBgColor.length)
             ],
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "space-between",
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        paddingBottom: 32,
-    },
-    homeButton: {
-        height: 75,
-        width: 75,
-    },
-    changeButton: {
-        height: 75,
-        width: 145,
-    },
-    changeButtonText: {
-        fontFamily: "kodomo",
-        fontSize: 28,
-    },
-    image: {
-        height: 500,
-        width: "75%",
     },
     playAgainButton: {
         flex: 1,
-    },
-    buttonStyle: {
-        height: 70,
-        width: 250,
-    },
-    buttonText: {
-        fontSize: 24,
     },
 });

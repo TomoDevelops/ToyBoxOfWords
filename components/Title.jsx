@@ -3,7 +3,7 @@ import React from "react";
 
 const Title = ({ children, fontSize }) => {
     return (
-        <View>
+        <View style={styles.titleContainer}>
             <Text style={[styles.title, { fontSize: fontSize }]}>
                 {children}
             </Text>
@@ -12,9 +12,13 @@ const Title = ({ children, fontSize }) => {
 };
 
 const styles = StyleSheet.create({
+    titleContainer: {
+        flex: 0.5,
+        alignContent: "center",
+        justifyContent: "center",
+    },
     title: {
         fontFamily: "kodomo",
-        marginBottom: 25,
     },
 });
 

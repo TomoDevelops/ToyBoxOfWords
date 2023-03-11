@@ -1,8 +1,8 @@
 const colors = {
     mainBgColor: "#FF3C3C",
-    vaibrantBlue: "#0000FF",
-    vaibrantRed: "#FF0000",
-    cardBgColor: "#a1ffa1",
+    vibrantBlue: "#0000ff",
+    vibrantRed: "#FF0000",
+    cardBgColor: "#7ddffa",
     gameBgColor: [
         "#F7F7F7",
         "#FCFCFC",
