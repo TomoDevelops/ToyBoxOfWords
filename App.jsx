@@ -6,11 +6,13 @@ import { useFonts } from "expo-font";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { TransitionSpecs } from "@react-navigation/stack";
+import { TransitionPresets } from "@react-navigation/stack";
 
 import PagesContextProvider from "./store/context/pages-context";
 
 import routes from "./screens/Routes";
-import colors from "./constants/Colors";
+import SettingsScreen from "./screens/SettingsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,14 +40,7 @@ export default function App() {
             <StatusBar barStyle="light-content" />
             <PagesContextProvider>
                 <NavigationContainer>
-                    <Stack.Navigator
-                        screenOptions={{
-                            headerShown: false,
-                            contentStyle: {
-                                backgroundColor: colors.mainBgColor,
-                            },
-                        }}
-                    >
+                    <Stack.Navigator>
                         {routes.map((route) => (
                             <Stack.Screen
                                 key={route.name}

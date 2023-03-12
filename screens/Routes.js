@@ -4,8 +4,10 @@ import MemoryCardGame from "./MemoryCardGame";
 import NumberCardGame from "./NumberCardGame";
 import ShapeCardGame from "./ShapeCardGame";
 import AlphabetCardGame from "./AlphabetCardGame";
+import SettingsScreen from "./SettingsScreen";
 
-const pageAnimation = {
+const pageOptions = {
+    headerShown: false,
     animation: "fade",
     presentation: "card",
 };
@@ -14,28 +16,33 @@ const routes = [
     {
         name: "Start",
         component: StartScreen,
-        options: pageAnimation,
+        options: pageOptions,
     },
     {
         name: "GameOver",
         component: GameOverScreen,
-        options: pageAnimation,
+        options: pageOptions,
     },
     {
         name: "MemoryCardGame",
         component: MemoryCardGame,
-        options: pageAnimation,
+        options: pageOptions,
     },
     {
         name: "NumberCardGame",
         component: NumberCardGame,
-        options: pageAnimation,
+        options: pageOptions,
     },
-    { name: "ShapeCardGame", component: ShapeCardGame, options: pageAnimation },
+    { name: "ShapeCardGame", component: ShapeCardGame, options: pageOptions },
     {
         name: "AlphabetCardGame",
         component: AlphabetCardGame,
-        options: pageAnimation,
+        options: pageOptions,
+    },
+    {
+        name: "設定",
+        component: SettingsScreen,
+        options: { presentation: "modal" },
     },
 ];
 

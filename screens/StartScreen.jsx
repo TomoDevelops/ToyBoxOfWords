@@ -23,6 +23,10 @@ const StartScreen = ({ navigation }) => {
         navigation.navigate(pagesContext.pages);
     };
 
+    const moveToSettingsScreen = () => {
+        navigation.navigate("設定");
+    };
+
     const { width, height } = useWindowDimensions();
     let buttonContainerWidth = "85%";
 
@@ -57,6 +61,7 @@ const StartScreen = ({ navigation }) => {
                         buttonStyle="h-20 w-36"
                         textStyle="text-white text-3xl"
                         buttonBgColor="bg-[#49e683] border-[3px] border-white"
+                        onPress={moveToSettingsScreen}
                     >
                         せってい
                     </Button>
