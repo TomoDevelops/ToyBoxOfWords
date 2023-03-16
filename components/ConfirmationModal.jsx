@@ -4,23 +4,26 @@ import { StatusBar } from "expo-status-bar";
 import Button from "./Button";
 
 const ConfirmationModal = ({
+    children,
     msg,
     confirmMsg,
     cancelMsg,
     modalVisible,
     onCancel,
     onConfirm,
+    font,
 }) => {
     return (
         <Modal visible={modalVisible} transparent={true} animationType="slide">
-            <View className="flex-1 justify-center items-center bg-[#00000080]">
+            <View className="flex-1 justify-center items-center bg-[#00000040]">
                 <StatusBar
-                    backgroundColor="#00000080"
+                    backgroundColor="#00000040"
                     barStyle="light-content"
                 />
-                <View className="items-center rounded-xl py-10 w-11/12 bg-white">
-                    <Text className="text-3xl font-[kodomo] mb-8">{msg}</Text>
-                    <View className="flex-row space-x-5">
+                <View className="items-center justify-around rounded-xl py-7 px-3 w-11/12 bg-white">
+                    <Text className={`text-3xl my-3 ${font}`}>{msg}</Text>
+                    {children}
+                    <View className="flex-row space-x-5 my-3">
                         <Button
                             buttonBgColor="bg-red-400"
                             buttonSpace="py-2 px-3 mx-3"

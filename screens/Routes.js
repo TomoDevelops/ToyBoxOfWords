@@ -37,12 +37,16 @@ const routes = [
     {
         name: "AlphabetCardGame",
         component: AlphabetCardGame,
-        options: pageOptions,
+        options: {
+            headerShown: false,
+            animation: "fade",
+            presentation: "card",
+        },
     },
     {
         name: "設定",
         component: SettingsScreen,
-        options: { presentation: "modal" },
+        options: { presentation: "card" },
     },
 ];
 

@@ -110,7 +110,10 @@ const MemoryCardGame = () => {
         >
             <HeaderButtons />
             <Title fontSize={30}>{"かーど を そろえよう"}</Title>
-            <GameBoard completed={completed}>
+            <GameBoard
+                completed={completed}
+                gameBoardLayout="content-around flex-row flex-wrap justify-around w-11/12"
+            >
                 {cards.map((card) => (
                     <SingleCard
                         key={card.id}
@@ -130,20 +133,6 @@ const MemoryCardGame = () => {
                 completed={completed}
                 restartButton={shuffleCards}
             />
-            {/* {completed && (
-                <Button
-                    style={styles.playAgainButton}
-                    buttonBgColor={{
-                        backgroundColor: "#ff959f",
-                        borderRadius: 24,
-                    }}
-                    buttonStyle="w-64 h-16"
-                    textStyle="text-white text-2xl"
-                    onPress={shuffleCards}
-                >
-                    もう いっかい
-                </Button>
-            )} */}
         </SafeAreaView>
     );
 };

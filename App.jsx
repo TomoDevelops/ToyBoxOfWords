@@ -6,8 +6,6 @@ import { useFonts } from "expo-font";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { TransitionSpecs } from "@react-navigation/stack";
-import { TransitionPresets } from "@react-navigation/stack";
 
 import PagesContextProvider from "./store/context/pages-context";
 

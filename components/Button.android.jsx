@@ -10,19 +10,16 @@ const Button = ({
     buttonSpace,
 }) => {
     return (
-        <View
+        <Pressable
             className={`overflow-hidden rounded-xl ${buttonBgColor} ${buttonSpace}`}
+            onPress={onPress}
         >
-            <Pressable
-                className={`justify-center p-2 ${buttonStyle}`}
-                android_ripple={{ color: "#aaaaaa80" }}
-                onPress={onPress}
-            >
+            <View className={`justify-center items-center p-2 ${buttonStyle}`}>
                 <Text className={`font-[kodomo] text-center ${textStyle}`}>
                     {children}
                 </Text>
-            </Pressable>
-        </View>
+            </View>
+        </Pressable>
     );
 };
 

@@ -11,11 +11,12 @@ import Button from "./Button";
 import ConfirmationModal from "./ConfirmationModal";
 
 const HeaderButtons = () => {
-    const [modalVisible, setModalVisible] = useState(false);
     const navigation = useNavigation();
     const moveHome = () => {
         navigation.navigate("Start");
+        toggleModal();
     };
+    const [modalVisible, setModalVisible] = useState(false);
 
     const toggleModal = () => {
         setModalVisible((prevState) => !prevState);
@@ -69,6 +70,7 @@ const HeaderButtons = () => {
                 modalVisible={modalVisible}
                 onCancel={toggleModal}
                 onConfirm={moveHome}
+                font="font-[kodomo]"
             />
         </View>
     );
