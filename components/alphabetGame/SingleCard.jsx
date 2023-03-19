@@ -20,8 +20,9 @@ const SingleCard = ({ alphabet }) => {
             onPress={() => playAlphabetSound()}
         >
             <View className="flex-row">
-                {alphabet.image.map((image) => (
+                {alphabet.image.map((image, index) => (
                     <Image
+                        key={index}
                         source={image}
                         className="w-36 h-28"
                         style={{ resizeMode: "contain" }}
