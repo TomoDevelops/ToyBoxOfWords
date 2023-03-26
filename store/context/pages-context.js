@@ -5,6 +5,7 @@ const GAME_SCREEN_NAME = [
     "NumberCardGame",
     "ShapeCardGame",
     "AlphabetCardGame",
+    "VehicleGame",
 ];
 
 export const PagesContext = createContext({

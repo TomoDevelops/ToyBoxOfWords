@@ -62,7 +62,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/bicycle.png"),
                 require("../assets/images/alphabetGame/butterfly.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/bicycle.mp3"),
                 require("../assets/audio/alphabetGame/butterfly.mp3"),
             ],
@@ -75,7 +75,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/car.png"),
                 require("../assets/images/alphabetGame/cow.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/car.mp3"),
                 require("../assets/audio/alphabetGame/cow.mp3"),
             ],
@@ -88,7 +88,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/dog.png"),
                 require("../assets/images/alphabetGame/duck.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/dog.mp3"),
                 require("../assets/audio/alphabetGame/duck.mp3"),
             ],
@@ -101,7 +101,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/egg.png"),
                 require("../assets/images/alphabetGame/elephant.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/egg.mp3"),
                 require("../assets/audio/alphabetGame/elephant.mp3"),
             ],
@@ -114,7 +114,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/fish.png"),
                 require("../assets/images/alphabetGame/flower.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/fish.mp3"),
                 require("../assets/audio/alphabetGame/flower.mp3"),
             ],
@@ -127,7 +127,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/giraffe.png"),
                 require("../assets/images/alphabetGame/glove.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/giraffe.mp3"),
                 require("../assets/audio/alphabetGame/glove.mp3"),
             ],
@@ -140,7 +140,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/horse.png"),
                 require("../assets/images/alphabetGame/house.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/horse.mp3"),
                 require("../assets/audio/alphabetGame/house.mp3"),
             ],
@@ -153,7 +153,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/ice.png"),
                 require("../assets/images/alphabetGame/icecream.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/ice.mp3"),
                 require("../assets/audio/alphabetGame/icecream.mp3"),
             ],
@@ -166,7 +166,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/jelly.png"),
                 require("../assets/images/alphabetGame/jumprope.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/jelly.mp3"),
                 require("../assets/audio/alphabetGame/jumprope.mp3"),
             ],
@@ -179,7 +179,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/koala.png"),
                 require("../assets/images/alphabetGame/ketchup.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/koala.mp3"),
                 require("../assets/audio/alphabetGame/ketchup.mp3"),
             ],
@@ -192,7 +192,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/lemon.png"),
                 require("../assets/images/alphabetGame/lion.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/lemon.mp3"),
                 require("../assets/audio/alphabetGame/lion.mp3"),
             ],
@@ -205,7 +205,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/monkey.png"),
                 require("../assets/images/alphabetGame/mouth.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/monkey.mp3"),
                 require("../assets/audio/alphabetGame/mouth.mp3"),
             ],
@@ -218,7 +218,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/nose.png"),
                 require("../assets/images/alphabetGame/nut.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/nose.mp3"),
                 require("../assets/audio/alphabetGame/nut.mp3"),
             ],
@@ -231,7 +231,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/octopus.png"),
                 require("../assets/images/alphabetGame/orange.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/octopus.mp3"),
                 require("../assets/audio/alphabetGame/orange.mp3"),
             ],
@@ -244,7 +244,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/pig.png"),
                 require("../assets/images/alphabetGame/pineapple.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/pig.mp3"),
                 require("../assets/audio/alphabetGame/pineapple.mp3"),
             ],
@@ -254,7 +254,7 @@ const GAME_DATA = {
             id: 17,
             alphabet: "Q",
             image: [require("../assets/images/alphabetGame/queen.png")],
-            image: [require("../assets/audio/alphabetGame/queen.mp3")],
+            audio: [require("../assets/audio/alphabetGame/queen.mp3")],
             alphabetAudio: require("../assets/audio/alphabetGame/q.mp3"),
         },
         {
@@ -264,7 +264,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/rainbow.png"),
                 require("../assets/images/alphabetGame/robot.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/rainbow.mp3"),
                 require("../assets/audio/alphabetGame/robot.mp3"),
             ],
@@ -277,7 +277,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/snake.png"),
                 require("../assets/images/alphabetGame/sun.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/snake.mp3"),
                 require("../assets/audio/alphabetGame/sun.mp3"),
             ],
@@ -290,7 +290,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/tiger.png"),
                 require("../assets/images/alphabetGame/train.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/tiger.mp3"),
                 require("../assets/audio/alphabetGame/train.mp3"),
             ],
@@ -303,7 +303,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/umbrella.png"),
                 require("../assets/images/alphabetGame/unicorn.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/umbrella.mp3"),
                 require("../assets/audio/alphabetGame/unicorn.mp3"),
             ],
@@ -316,7 +316,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/vegetable.png"),
                 require("../assets/images/alphabetGame/violin.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/vegetable.mp3"),
                 require("../assets/audio/alphabetGame/violin.mp3"),
             ],
@@ -329,7 +329,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/water.png"),
                 require("../assets/images/alphabetGame/whale.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/water.mp3"),
                 require("../assets/audio/alphabetGame/whale.mp3"),
             ],
@@ -339,7 +339,7 @@ const GAME_DATA = {
             id: 24,
             alphabet: "X",
             image: [require("../assets/images/alphabetGame/x-ray.png")],
-            image: [require("../assets/audio/alphabetGame/x-ray.mp3")],
+            audio: [require("../assets/audio/alphabetGame/x-ray.mp3")],
             alphabetAudio: require("../assets/audio/alphabetGame/x.mp3"),
         },
         {
@@ -349,7 +349,7 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/yacht.png"),
                 require("../assets/images/alphabetGame/yarn.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/yacht.mp3"),
                 require("../assets/audio/alphabetGame/yarn.mp3"),
             ],
@@ -362,11 +362,85 @@ const GAME_DATA = {
                 require("../assets/images/alphabetGame/zebra.png"),
                 require("../assets/images/alphabetGame/zoo.png"),
             ],
-            image: [
+            audio: [
                 require("../assets/audio/alphabetGame/zebra.mp3"),
                 require("../assets/audio/alphabetGame/zoo.mp3"),
             ],
             alphabetAudio: require("../assets/audio/alphabetGame/z.mp3"),
+        },
+    ],
+    vehicleGame: [
+        {
+            id: "airplane",
+            image: require("../assets/images/vehicleGame/airplane.png"),
+            audio: require("../assets/audio/vehicleGame/airplane.mp3"),
+            size: "w-32 h-14",
+        },
+        {
+            id: "ambulance",
+            image: require("../assets/images/vehicleGame/ambulance.png"),
+            audio: require("../assets/audio/vehicleGame/ambulance.mp3"),
+            size: "w-36 h-20",
+        },
+        {
+            id: "bicycle",
+            image: require("../assets/images/vehicleGame/bicycle.png"),
+            audio: require("../assets/audio/vehicleGame/bicycle.mp3"),
+            size: "w-32 h-24",
+        },
+        {
+            id: "bus",
+            image: require("../assets/images/vehicleGame/bus.png"),
+            audio: require("../assets/audio/vehicleGame/bus.mp3"),
+            size: "w-48 h-16",
+        },
+        {
+            id: "car",
+            image: require("../assets/images/vehicleGame/car.png"),
+            audio: require("../assets/audio/vehicleGame/car.mp3"),
+            size: "w-40 h-20",
+        },
+        {
+            id: "excavator",
+            image: require("../assets/images/vehicleGame/excavator.png"),
+            audio: require("../assets/audio/vehicleGame/excavator.mp3"),
+            size: "w-40 h-32",
+        },
+        {
+            id: "firetruck",
+            image: require("../assets/images/vehicleGame/firetruck.png"),
+            audio: require("../assets/audio/vehicleGame/firetruck.mp3"),
+            size: "w-56 h-24",
+        },
+        {
+            id: "garbagetruck",
+            image: require("../assets/images/vehicleGame/garbagetruck.png"),
+            audio: require("../assets/audio/vehicleGame/garbagetruck.mp3"),
+            size: "w-48 h-24",
+        },
+        {
+            id: "motorcycle",
+            image: require("../assets/images/vehicleGame/motorcycle.png"),
+            audio: require("../assets/audio/vehicleGame/motorcycle.mp3"),
+            size: "w-[130px] h-28",
+        },
+        {
+            id: "policecar",
+            image: require("../assets/images/vehicleGame/policecar.png"),
+            audio: require("../assets/audio/vehicleGame/policecar.mp3"),
+            size: "w-56 h-20",
+        },
+        {
+            id: "shinkansen",
+            image: require("../assets/images/vehicleGame/shinkansen.png"),
+            audio: require("../assets/audio/vehicleGame/shinkansen.mp3"),
+            size: "w-full h-14",
+        },
+        {
+            id: "truck",
+            image: require("../assets/images/vehicleGame/truck.png"),
+            audio: require("../assets/audio/vehicleGame/truck.mp3"),
+            size: "w-[250px] h-20",
         },
     ],
     // "number-game": [

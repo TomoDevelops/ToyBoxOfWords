@@ -5,6 +5,7 @@ import NumberCardGame from "./NumberCardGame";
 import ShapeCardGame from "./ShapeCardGame";
 import AlphabetCardGame from "./AlphabetCardGame";
 import SettingsScreen from "./SettingsScreen";
+import VehicleGame from "./VehicleGame";
 
 const pageOptions = {
     headerShown: false,
@@ -37,11 +38,12 @@ const routes = [
     {
         name: "AlphabetCardGame",
         component: AlphabetCardGame,
-        options: {
-            headerShown: false,
-            animation: "fade",
-            presentation: "card",
-        },
+        options: pageOptions,
+    },
+    {
+        name: "VehicleGame",
+        component: VehicleGame,
+        options: pageOptions,
     },
     {
         name: "設定",

@@ -44,7 +44,13 @@ const HeaderButtons = () => {
 
     return (
         <View className="flex-1 flex-row items-start justify-between mt-2 w-11/12">
-            <Button buttonBgColor="bg-white" onPress={toggleModal}>
+            <Button
+                buttonBgColor={`bg-white ${
+                    Platform.OS === "android" ? "" : "shadow-sm"
+                }`}
+                style={Platform.OS === "android" ? { elevation: 2 } : ""}
+                onPress={toggleModal}
+            >
                 <Ionicons name="home" size={35} color="black" />
             </Button>
             <View className="flex-row justify-center w-1/3">
