@@ -11,7 +11,6 @@ import GAME_DATA from "../data/data";
 import GameBoard from "../components/GameBoard";
 import SingleCard from "../components/memoryGame/SingleCard";
 import Title from "../components/Title";
-import Button from "../components/Button";
 import Congratulations from "../components/Congratulations";
 
 const MemoryCardGame = () => {
