@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from "react";
-import {
-    StyleSheet,
-    SafeAreaView,
-    Platform,
-    StatusBar,
-    Pressable,
-} from "react-native";
-import * as Animatable from "react-native-animatable";
+import React from "react";
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
 
-import GameBoard from "../components/GameBoard";
-import HeaderButtons from "../components/HeaderButtons";
-import Title from "../components/Title";
+import GameBoard from "../components/shared/GameBoard";
+import HeaderButtons from "../components/shared/HeaderButtons";
+import Title from "../components/shared/Title";
+import Vehicle from "../components/vehicleGame/Vehicle";
 import colors from "../constants/Colors";
 
 import GAME_DATA from "../data/data";
 
-const imageSize = {
+const imageData = {
     airplane: {
         size: "w-44 h-20",
         delay: 0,
@@ -84,28 +78,7 @@ const imageSize = {
     },
 };
 
-const VehicleGame = ({ navigation }) => {
-    const [offScreen, setOffScreen] = useState(400);
-    const [rerenderKey, setRerenderKey] = useState(Date.now());
-    const [animationPaused, setAnimationPaused] = useState(false);
-
-    useEffect(() => {
-        const unsubscribe = navigation.addListener("focus", () => {
-            setOffScreen(400);
-            setRerenderKey(Date.now());
-        });
-
-        return unsubscribe;
-    }, [navigation]);
-
-    const handleImagePress = () => {
-        console.log("Image Pressed");
-
-        setTimeout(() => {
-            setAnimationPaused(false);
-        }, 5000);
-    };
-
+const VehicleGame = () => {
     return (
         <SafeAreaView
             className={`flex-1 items-center justify-between pb-8`}
@@ -113,47 +86,14 @@ const VehicleGame = ({ navigation }) => {
         >
             <HeaderButtons />
             <Title fontSize={30}>{"のりもの を さわろう"}</Title>
-            <GameBoard gameBoardLayout="w-full bg-slate-500">
-                {GAME_DATA.vehicleGame.map((data) => (
-                    <Pressable
-                        onPress={handleImagePress}
-                        key={`${data.id}-${rerenderKey}`}
-                        className={`${imageSize[data.id].size}`}
-                        style={[
-                            {
-                                position: "absolute",
-                            },
-                            imageSize[data.id].yPosition,
-                        ]}
-                    >
-                        <Animatable.Image
-                            source={data.image}
-                            style={[
-                                {
-                                    flex: 1,
-                                    width: "100%",
-                                    height: "100%",
-                                },
-                            ]}
-                            resizeMode={
-                                data.id === "shinkansen" ? "contain" : "cover"
-                            }
-                            animation={{
-                                from: {
-                                    transform: [{ translateX: offScreen }],
-                                },
-                                to: {
-                                    transform: [{ translateX: -600 }],
-                                },
-                            }}
-                            iterationCount={"infinite"}
-                            paused={animationPaused}
-                            duration={imageSize[data.id].duration}
-                            delay={imageSize[data.id].delay}
-                            easing="linear"
-                            useNativeDriver={true}
-                        />
-                    </Pressable>
+            <GameBoard gameBoardLayout="w-full">
+                {GAME_DATA.vehicleGame.map((data, index) => (
+                    <Vehicle
+                        key={data.id}
+                        data={data}
+                        index={index}
+                        imageData={imageData[data.id]}
+                    />
                 ))}
             </GameBoard>
         </SafeAreaView>

@@ -1,11 +1,11 @@
-import React from "react";
-import { View, Modal, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { Image, Modal, View } from "react-native";
 
 import Button from "./Button";
 
-import GAME_DATA from "../data/data";
 import { useNavigation } from "@react-navigation/native";
+import GAME_DATA from "../../data/data";
 
 const Congratulations = ({ completed, restartButton }) => {
     const navigation = useNavigation();

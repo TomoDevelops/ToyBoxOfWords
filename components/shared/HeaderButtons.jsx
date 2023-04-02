@@ -1,11 +1,11 @@
-import { View, useWindowDimensions } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import React, { useContext, useEffect, useState } from "react";
+import { useWindowDimensions, View } from "react-native";
 
 import Entypo from "@expo/vector-icons/Entypo";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-import { PagesContext } from "../store/context/pages-context";
+import { PagesContext } from "../../store/context/pages-context";
 
 import Button from "./Button";
 import ConfirmationModal from "./ConfirmationModal";

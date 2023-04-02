@@ -1,20 +1,20 @@
-import {
-    View,
-    SafeAreaView,
-    useWindowDimensions,
-    Text,
-    TextInput,
-    Vibration,
-} from "react-native";
 import { useIsFocused } from "@react-navigation/native";
-import React, { useContext, useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import LottieView from "lottie-react-native";
+import React, { useContext, useEffect, useState } from "react";
+import {
+    SafeAreaView,
+    Text,
+    TextInput,
+    useWindowDimensions,
+    Vibration,
+    View,
+} from "react-native";
 
+import Button from "../components/shared/Button";
+import ConfirmationModal from "../components/shared/ConfirmationModal";
 import GAME_DATA from "../data/data";
-import Button from "../components/Button";
 import { PagesContext } from "../store/context/pages-context";
-import ConfirmationModal from "../components/ConfirmationModal";
 
 const StartScreen = ({ navigation }) => {
     const pagesContext = useContext(PagesContext);

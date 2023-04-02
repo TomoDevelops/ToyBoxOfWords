@@ -1,9 +1,9 @@
 import {
-    StyleSheet,
+    FlatList,
+    Platform,
     SafeAreaView,
     StatusBar,
-    Platform,
-    FlatList,
+    StyleSheet,
     View,
 } from "react-native";
 
@@ -11,14 +11,14 @@ import React, { useEffect, useState } from "react";
 
 import GAME_DATA from "../data/data";
 
-import colors from "../constants/Colors";
-import GameBoard from "../components/GameBoard";
 import SingleCard from "../components/alphabetGame/SingleCard";
+import GameBoard from "../components/shared/GameBoard";
+import colors from "../constants/Colors";
 
 import AlphabetCard from "../components/alphabetGame/AlphabetCard";
 
-import HeaderButtons from "../components/HeaderButtons";
 import { Audio } from "expo-av";
+import HeaderButtons from "../components/shared/HeaderButtons";
 
 const AlphabetCardGame = () => {
     const [currentAlphabet, setCurrentAlphabet] = useState("A");

@@ -1,14 +1,13 @@
+import React from "react";
 import {
+    Platform,
+    SafeAreaView,
+    StatusBar,
     StyleSheet,
     Text,
-    View,
-    SafeAreaView,
-    Platform,
-    StatusBar,
 } from "react-native";
-import React from "react";
 
-import HeaderButtons from "../components/HeaderButtons";
+import HeaderButtons from "../components/shared/HeaderButtons";
 
 import colors from "../constants/Colors";
 

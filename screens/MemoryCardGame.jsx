@@ -1,17 +1,17 @@
-import { StyleSheet, SafeAreaView, StatusBar, Platform } from "react-native";
 import { Audio } from "expo-av";
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-import HeaderButtons from "../components/HeaderButtons";
+import HeaderButtons from "../components/shared/HeaderButtons";
 
 import colors from "../constants/Colors";
 import GAME_DATA from "../data/data";
 
-import GameBoard from "../components/GameBoard";
 import SingleCard from "../components/memoryGame/SingleCard";
-import Title from "../components/Title";
-import Congratulations from "../components/Congratulations";
+import Congratulations from "../components/shared/Congratulations";
+import GameBoard from "../components/shared/GameBoard";
+import Title from "../components/shared/Title";
 
 const MemoryCardGame = () => {
     const [cards, setCards] = useState([]);

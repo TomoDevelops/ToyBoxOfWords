@@ -11,6 +11,7 @@ const pageOptions = {
     headerShown: false,
     animation: "fade",
     presentation: "card",
+    unmountOnBlur: true,
 };
 
 const routes = [
