@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useContext, useEffect, useState } from "react";
-import { useWindowDimensions, View } from "react-native";
+import { View } from "react-native";
 
 import Entypo from "@expo/vector-icons/Entypo";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -32,43 +32,26 @@ const HeaderButtons = () => {
         navigation.navigate(pagesContext.pages);
     }, [pagesContext.pages]);
 
-    const { width, height } = useWindowDimensions();
-    let iconSize = 50;
-
-    if (width < 380) {
-        iconSize = 40;
-    }
-    if (height < 700) {
-        iconSize = 40;
-    }
-
     return (
-        <View className="flex-1 flex-row items-start justify-between mt-2 w-11/12">
+        <View className=" flex-row items-start justify-between mt-2 w-11/12">
             <Button
                 buttonBgColor={`bg-white ${
                     Platform.OS === "android" ? "" : "shadow-sm"
                 }`}
+                buttonSpace={`px-7`}
                 style={Platform.OS === "android" ? { elevation: 2 } : ""}
                 onPress={toggleModal}
             >
-                <Ionicons name="home" size={35} color="black" />
+                <Ionicons name="home" size={25} color="black" />
             </Button>
-            <View className="flex-row justify-center w-1/3">
-                <Button
-                    buttonSpace="mx-[6px]"
-                    buttonBgColor="bg-vibrant-blue border-[3px] border-white"
-                    onPress={shuffleGame}
-                >
-                    <Entypo name="cycle" size={iconSize} color="#fff" />
-                </Button>
-                <Button
-                    buttonSpace="mx-[6px]"
-                    buttonBgColor="bg-vibrant-red border-[3px] border-white"
-                >
-                    <Entypo name="grid" size={iconSize} color="#fff" />
-                </Button>
-            </View>
-            <View style={{ width: iconSize, height: iconSize }}></View>
+
+            <Button
+                buttonSpace="px-7"
+                buttonBgColor="bg-vibrant-blue border-[3px] border-white"
+                onPress={shuffleGame}
+            >
+                <Entypo name="cycle" size={25} color="#fff" />
+            </Button>
             <ConfirmationModal
                 msg="ほーむ に もどる?"
                 confirmMsg="もどる"

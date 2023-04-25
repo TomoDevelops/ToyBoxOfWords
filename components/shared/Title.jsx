@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
         flex: 0.5,
         alignContent: "center",
         justifyContent: "center",
+        marginTop: 10,
     },
     title: {
         fontFamily: "kodomo",

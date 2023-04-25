@@ -1,10 +1,11 @@
-import StartScreen from "./StartScreen";
+import AlphabetCardGame from "./AlphabetCardGame";
+import DrawingGame from "./DrawingGame";
 import GameOverScreen from "./GameOverScreen";
 import MemoryCardGame from "./MemoryCardGame";
 import NumberCardGame from "./NumberCardGame";
-import ShapeCardGame from "./ShapeCardGame";
-import AlphabetCardGame from "./AlphabetCardGame";
 import SettingsScreen from "./SettingsScreen";
+import ShapeCardGame from "./ShapeCardGame";
+import StartScreen from "./StartScreen";
 import VehicleGame from "./VehicleGame";
 
 const pageOptions = {
@@ -44,6 +45,11 @@ const routes = [
     {
         name: "VehicleGame",
         component: VehicleGame,
+        options: pageOptions,
+    },
+    {
+        name: "DrawingGame",
+        component: DrawingGame,
         options: pageOptions,
     },
     {
