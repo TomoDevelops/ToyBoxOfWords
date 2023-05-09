@@ -17,7 +17,7 @@ const Button = ({
             onPress={onPress}
         >
             <View className={`justify-center items-center p-2 ${buttonStyle}`}>
-                <Text className={`font-[kodomo] text-center ${textStyle}`}>
+                <Text className={`font-kodomo text-center ${textStyle}`}>
                     {children}
                 </Text>
             </View>

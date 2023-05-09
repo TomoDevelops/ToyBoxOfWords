@@ -13,6 +13,11 @@ module.exports = {
                 "vibrant-red": "#FF0000",
                 "card-bg": "#7ddffa",
             },
+            fontFamily: {
+                kodomo: "kodomo",
+                "kodomo-light": "kodomoLight",
+                archivo: "archivo",
+            },
         },
     },
     plugins: [],

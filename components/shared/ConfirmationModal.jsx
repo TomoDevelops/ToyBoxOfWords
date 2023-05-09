@@ -26,16 +26,16 @@ const ConfirmationModal = ({
                     <View className="flex-row space-x-5 my-3">
                         <Button
                             buttonBgColor="bg-red-400"
-                            buttonSpace="py-2 px-3 mx-3"
-                            textStyle="text-white text-xl"
+                            buttonSpace=" mx-3"
+                            textStyle="text-white text-3xl"
                             onPress={onCancel}
                         >
                             {cancelMsg}
                         </Button>
                         <Button
                             buttonBgColor="bg-emerald-400"
-                            buttonSpace="py-2 px-3 mx-3"
-                            textStyle="text-white text-xl"
+                            buttonSpace=" mx-3"
+                            textStyle="text-white text-3xl"
                             onPress={onConfirm}
                         >
                             {confirmMsg}

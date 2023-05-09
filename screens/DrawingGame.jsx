@@ -5,6 +5,7 @@ import {
     StatusBar,
     StyleSheet,
     View,
+    Text,
 } from "react-native";
 import { SketchCanvas } from "rn-perfect-sketch-canvas";
 import { Tooltip } from "@rneui/themed";
@@ -15,7 +16,8 @@ import HeaderButtons from "../components/shared/HeaderButtons";
 import Title from "../components/shared/Title";
 import Button from "../components/shared/Button";
 import colors from "../constants/Colors";
-import { Text } from "react-native";
+
+const colorPalette = ["#ffffff", "#ff0000", "#00FF00", "#0000FF", "#000000"];
 
 const DrawingGame = () => {
     const [color, setColor] = useState("#ff0000");
@@ -52,28 +54,52 @@ const DrawingGame = () => {
 
             <View
                 className="w-full flex-row my-4 items-center justify-around"
-                style={{ flex: 0.4 }}
+                style={{ flex: 0.75 }}
             >
                 <Tooltip
+                    height={80}
+                    width={300}
                     visible={tooltipOpen}
                     onOpen={() => setTooltipOpen(true)}
                     onClose={() => setTooltipOpen(false)}
-                    popover={
-                        <Text style={{ color: "#fff" }}>Tooltip text</Text>
-                    }
+                    containerStyle={{
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                    }}
+                    popover={colorPalette.map((palette) => (
+                        <Svg height="50" width="50" key={palette}>
+                            <Circle
+                                cx="25"
+                                cy="25"
+                                r="20"
+                                stroke="#fff"
+                                strokeWidth="1"
+                                fill={palette}
+                                onPress={() => {
+                                    setColor(palette);
+                                    setTooltipOpen(false);
+                                }}
+                            />
+                        </Svg>
+                    ))}
                 >
                     <Svg height="50" width="50">
                         <Circle
                             cx="25"
                             cy="25"
-                            r="25"
-                            stroke="#fff"
-                            stroke-width="5"
+                            r="20"
+                            stroke="#000"
+                            strokeWidth="2"
                             fill={color}
                         />
                     </Svg>
                 </Tooltip>
-                <Button onPress={() => canvasRef.current?.reset()}>
+                <Button
+                    onPress={() => canvasRef.current?.reset()}
+                    buttonBgColor="bg-green-500"
+                    buttonStyle="px-4"
+                    textStyle="text-white text-lg"
+                >
                     やりなおし
                 </Button>
             </View>
@@ -90,5 +116,11 @@ const styles = StyleSheet.create({
                 Math.floor(Math.random() * colors.gameBgColor.length)
             ],
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    },
+    f: {
+        flex: "auto",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
     },
 });

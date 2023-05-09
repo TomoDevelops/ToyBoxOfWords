@@ -59,7 +59,7 @@ const HeaderButtons = () => {
                 modalVisible={modalVisible}
                 onCancel={toggleModal}
                 onConfirm={moveHome}
-                font="font-[kodomo]"
+                font="font-kodomo"
             />
         </View>
     );

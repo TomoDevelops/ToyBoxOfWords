@@ -19,7 +19,7 @@ const Button = ({
                 underlayColor="#aaaaaa80"
                 onPress={onPress}
             >
-                <Text className={`font-[kodomo] text-center ${textStyle}`}>
+                <Text className={`font-kodomo text-center ${textStyle}`}>
                     {children}
                 </Text>
             </TouchableHighlight>
