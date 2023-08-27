@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import {
+    Image,
     Platform,
     SafeAreaView,
     StatusBar,
     StyleSheet,
     View,
-    Text,
 } from "react-native";
 import { SketchCanvas } from "rn-perfect-sketch-canvas";
 import { Tooltip } from "@rneui/themed";
@@ -16,21 +16,29 @@ import HeaderButtons from "../components/shared/HeaderButtons";
 import Title from "../components/shared/Title";
 import Button from "../components/shared/Button";
 import colors from "../constants/Colors";
+import { PagesContext } from "../store/context/pages-context";
 
 const colorPalette = ["#ffffff", "#ff0000", "#00FF00", "#0000FF", "#000000"];
 
 const DrawingGame = () => {
     const [color, setColor] = useState("#ff0000");
+    const [image, setImage] = useState();
     const canvasRef = useRef(null);
     const [tooltipOpen, setTooltipOpen] = useState(false);
+    const pagesContext = useContext(PagesContext);
 
     useEffect(() => {
         canvasRef.current?.reset();
-
-        return () => {
-            canvasRef.current?.reset();
-        };
     }, []);
+
+    useEffect(() => {
+        canvasRef.current?.reset();
+    }, [pagesContext.pages]);
+
+    const saveImage = () => {
+        setImage(canvasRef.current?.toImage());
+        console.log(image);
+    };
 
     return (
         <SafeAreaView
@@ -101,6 +109,14 @@ const DrawingGame = () => {
                     textStyle="text-white text-lg"
                 >
                     やりなおし
+                </Button>
+                <Button
+                    onPress={() => saveImage()}
+                    buttonBgColor="bg-green-500"
+                    buttonStyle="px-4"
+                    textStyle="text-white text-lg"
+                >
+                    Save
                 </Button>
             </View>
         </SafeAreaView>
